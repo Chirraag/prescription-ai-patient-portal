@@ -4,12 +4,13 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDTchZJL91yPWsUSGEW_OQf1JOVzGpwJu8",
+  apiKey: "AIzaSyBJa6MOWvizi6xWCuOGXnaFIvjcyQkM60w",
   authDomain: "prescription-5375b.firebaseapp.com",
   projectId: "prescription-5375b",
-  storageBucket: "prescription-5375b.appspot.com",
-  messagingSenderId: "950261219639",
-  appId: "1:950261219639:web:6b3b6f68e4ed3a26290b3d"
+  storageBucket: "prescription-5375b.firebasestorage.app",
+  messagingSenderId: "683791249308",
+  appId: "1:683791249308:web:229cfcc5bd583b9723e259",
+  measurementId: "G-N8R4P0DC65"
 };
 
 // Initialize Firebase

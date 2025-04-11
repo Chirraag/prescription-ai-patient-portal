@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import SignupForm from "@/components/auth/SignupForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -37,12 +37,11 @@ const Signup = () => {
         
         <Tabs defaultValue="signup" className="w-full max-w-md">
           <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger value="login">Login</TabsTrigger>
+            <TabsTrigger value="login" asChild>
+              <Link to="/login">Login</Link>
+            </TabsTrigger>
             <TabsTrigger value="signup">Sign Up</TabsTrigger>
           </TabsList>
-          <TabsContent value="login">
-            <SignupForm />
-          </TabsContent>
           <TabsContent value="signup">
             <SignupForm />
           </TabsContent>

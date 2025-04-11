@@ -1,8 +1,9 @@
 
-import React, { useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import React from "react";
+import { Navigate, Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import LoginForm from "@/components/auth/LoginForm";
+import SignupForm from "@/components/auth/SignupForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Login = () => {
@@ -38,12 +39,11 @@ const Login = () => {
         <Tabs defaultValue="login" className="w-full max-w-md">
           <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="login">Login</TabsTrigger>
-            <TabsTrigger value="signup">Sign Up</TabsTrigger>
+            <TabsTrigger value="signup" asChild>
+              <Link to="/signup">Sign Up</Link>
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="login">
-            <LoginForm />
-          </TabsContent>
-          <TabsContent value="signup">
             <LoginForm />
           </TabsContent>
         </Tabs>
