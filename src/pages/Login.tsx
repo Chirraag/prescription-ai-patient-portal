@@ -1,10 +1,8 @@
 
 import React from "react";
-import { Navigate, Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import LoginForm from "@/components/auth/LoginForm";
-import SignupForm from "@/components/auth/SignupForm";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Login = () => {
   const { currentUser } = useAuth();
@@ -36,17 +34,9 @@ const Login = () => {
           Prescription AI
         </div>
         
-        <Tabs defaultValue="login" className="w-full max-w-md">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger value="login">Login</TabsTrigger>
-            <TabsTrigger value="signup" asChild>
-              <Link to="/signup">Sign Up</Link>
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="login">
-            <LoginForm />
-          </TabsContent>
-        </Tabs>
+        <div className="w-full max-w-md">
+          <LoginForm />
+        </div>
       </div>
     </div>
   );
